@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFD455"
+    tools:context="com.example.muvr.MainActivity" >
+
+    <TextView
+        android:id="@+id/muvr_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Welcome to MUVR"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/muvr_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/muvr_welcome"
+        android:layout_below="@+id/muvr_welcome"
+        android:text="book-a-tempo "
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner1"
+        android:layout_below="@+id/muvr_book"
+        android:layout_marginLeft="26dp"
+        android:src="@drawable/logo" />
+
+
+    <Button
+        android:id="@+id/Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FARE"
+        android:id="@+id/FARE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/Book"
+        android:layout_alignStart="@+id/Book" />
+<LinearLayout android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/lin1"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/imageView1"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Atul shakh"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/lin1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></TextView>
+    <EditText android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content">
+        </EditText>
+</LinearLayout>
+
+
+
+</RelativeLayout>

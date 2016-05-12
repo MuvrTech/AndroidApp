@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.muvr"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <!--
+ Maps API needs OpenGL ES 2.0.
+
+     keytool -list -v -keystore C:\Users\sai\.android\debug.keystore -alias androiddebugkey -storepass android -keypass android
+
+///your keystore information
+Microsoft Windows [Version 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\Administrator>keytool -list -v -keystore mystore.keystore
+'keytool' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Administrator>keytool -list -v -keystore "%USERPROFILE%\.android\debug.
+keystore" -alias androiddebugkey -storepass android -keypass android
+'keytool' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Administrator>cd C:\Program Files\Java\jdk1.7.0_71\bin
+The system cannot find the path specified.
+
+C:\Users\Administrator>cd C:\Program Files
+
+C:\Program Files>cd java
+
+C:\Program Files\Java>cd jdk1.8.0_45
+
+C:\Program Files\Java\jdk1.8.0_45>cd bin
+
+C:\Program Files\Java\jdk1.8.0_45\bin>keytool -list -v -keystore C:\Users\sai\.a
+ndroid\debug.keystore -alias androiddebugkey -storepass android -keypass android
+
+Alias name: androiddebugkey
+Creation date: Jan 7, 2016
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Android Debug, O=Android, C=US
+Issuer: CN=Android Debug, O=Android, C=US
+Serial number: 3f7dce7c
+Valid from: Thu Jan 07 11:01:38 IST 2016 until: Sat Dec 30 11:01:38 IST 2045
+Certificate fingerprints:
+         MD5:  66:13:FA:66:54:78:A5:52:0F:AB:3A:FB:78:C1:6B:6A
+         SHA1: 4F:46:AE:7D:E4:A5:BC:B6:CB:11:ED:0A:2F:72:89:F2:F5:FA:7B:94
+         SHA256: 7C:9F:21:C4:4E:F1:CE:6E:EE:E5:72:F8:CC:19:93:D5:65:39:43:97:4D:
+09:5C:C1:79:18:35:BB:3A:5E:CD:3F
+         Signature algorithm name: SHA256withRSA
+         Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: C9 20 66 27 87 A3 0C 80   E0 C8 27 06 4A 44 91 53  . f'......'.JD.S
+0010: 03 DF 4C 05                                        ..L.
+]
+]
+
+
+C:\Program Files\Java\jdk1.8.0_45\bin>
+    -->
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- External storage for caching. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- My Location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.example.muvr.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AddressActivity"
+            android:label="@string/title_activity_address" />
+        <activity
+            android:name=".MuvrActivity"
+            android:label="@string/title_activity_muvr" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyA02SAzrlHtxndrS24jl9JUkRUJ7SDmmhs" />
+
+        <activity android:name=".DistanceCalculation" />
+        <activity
+            android:name=".FareActivity"
+            android:label="@string/title_activity_fare" >
+        </activity>
+        <activity
+            android:name=".ContactPerson"
+            android:label="@string/title_activity_contact_person" >
+        </activity>
+        <activity
+            android:name=".ConfirmBooking"
+            android:label="@string/title_activity_confirm_booking" >
+        </activity>
+    </application>
+
+</manifest>
